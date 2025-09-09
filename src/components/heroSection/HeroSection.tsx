@@ -39,11 +39,11 @@ export default function HeroSection() {
                 </div>
 
                 <div className="curv-arrow">
-                    <img src="/src/assets/curv-arrow.png" alt="" />
+                    <img src="/curv-arrow.png" alt="" />
                 </div>
 
                 <div className="random-lines">
-                    <img src="/src/assets/random-lines.svg" alt="" />
+                    <img src="/random-lines.svg" alt="" />
                 </div>
                 <div className="user-image">
                     <img src="https://pbs.twimg.com/profile_images/1962515460148326401/dBeLgEGo_400x400.jpg" alt="user" />

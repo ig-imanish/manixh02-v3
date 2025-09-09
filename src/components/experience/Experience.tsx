@@ -9,7 +9,7 @@ export default function Experience() {
             <section className="experience-section">
                 <SectionTitle>Places I’ve Made an Impact</SectionTitle>
                 <ExperienceCard
-                    logoUrl="/src/assets/jabsz.png"
+                    logoUrl="/jabsz.png"
                     company="Jabsz Gaming Studios"
                     links={[{ url: "https://www.jabszgamingstudios.com/", icon: <RiShareBoxFill /> }]}
                     status="Working"
