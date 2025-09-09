@@ -3,17 +3,6 @@
 Welcome to my portfolio!  
 Explore my projects, skills, and experience in web development and software engineering.
 
-## 🚀 Projects
-
-- **Project 1:** Description of your main project.
-- **Project 2:** Description of another project.
-
-## 🛠️ Skills
-
-- JavaScript, React, Node.js
-- HTML, CSS, Tailwind
-- Git, GitHub
-
 ## 📫 Contact
 
 Feel free to reach out via [email](mailto:work.manish02@yahoo.com) or connect on [LinkedIn](https://linkedin.com/in/imanish02).
