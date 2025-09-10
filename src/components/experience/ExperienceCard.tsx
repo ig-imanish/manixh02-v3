@@ -14,8 +14,8 @@ interface ExperienceCardProps {
 export default function ExperienceCard({ logo, logoUrl, company, links, status, role, dates, location }: ExperienceCardProps) {
     return (
         <div className="exp-card">
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div className="exp-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', width: '100%' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
                     <div className="exp-logo">
                         {logoUrl ? (
                             <img src={logoUrl} alt={company + ' logo'} className="exp-logo-img" />
@@ -23,7 +23,7 @@ export default function ExperienceCard({ logo, logoUrl, company, links, status, 
                             logo
                         )}
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '-10px' }}>
                         <div className="exp-company-row">
                             <span className="exp-company-name">{company}</span>
                             <div className="exp-company-icons">
@@ -39,12 +39,12 @@ export default function ExperienceCard({ logo, logoUrl, company, links, status, 
                                 )}
                             </div>
                         </div>
-                        <div style={{ fontSize: '1rem', marginTop: '2px', color: '#b3b3b3' }}>{role}</div>
+                        <div className="exp-role" style={{ fontSize: '1rem', marginTop: '2px', color: '#b3b3b3' }}>{role}</div>
                     </div>
                 </div>
-                <div style={{ textAlign: 'right', minWidth: '180px', alignSelf: 'center' }}>
-                    <div style={{ color: '#b3b3b3', fontSize: '0.9em' }}>{dates}</div>
-                    <div style={{ color: '#b3b3b3', fontSize: '0.9em' }}>{location}</div>
+                <div className="exp-meta" >
+                    <span>{dates}</span>
+                    <span>{location}</span>
                 </div>
             </div>
         </div>

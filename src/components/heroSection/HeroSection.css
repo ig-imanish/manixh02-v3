@@ -1,5 +1,6 @@
 .contact-me {
   margin-top: 32px;
+  margin-bottom: 16px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -166,10 +167,6 @@
 }
 
 @keyframes pulse-dot {
-  /* 0% {
-    transform: scale(1);
-    opacity: 1;
-  } */
   50% {
     transform: scale(1.4);
     opacity: 0.7;
@@ -197,8 +194,8 @@
 
 .hero-section .user-info .curv-arrow {
   position: absolute;
-  top: 110px;
-  left: 63%;
+  top: 70px;
+  left: 75%;
   transform: rotate(90deg);
   width: 40px;
   height: 40px;
@@ -206,9 +203,55 @@
 
 .hero-section .user-info .random-lines {
   position: absolute;
-  top: 340px;
-  left: 62%;
+  top: 290px;
+  left: 70%;
   transform: rotate(20deg);
   width: 40px;
   height: 40px;
+}
+
+@media (max-width: 700px) {
+  .hero-section .user-info .user-image {
+    margin-right: 0;
+    width: 80px;
+    height: 80px;
+  }
+  .hero-section .user-info .user h1 {
+    font-size: 26px;
+    line-height: 28px;
+  }
+  .hero-section .user-info .curv-arrow {
+    width: 20px !important;
+    height: 20px !important;
+    top: 60px;
+    left: 70%;
+    transform: rotate(90deg) scale(0.7);
+  }
+  .hero-section .user-info .random-lines {
+    top: 380px;
+    left: 78%;
+  }
+  .hero-section .about-me {
+    margin-top: 24px;
+  }
+  .hero-section .user-info .user .general-info {
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  .hero-section .user-info .user .name-availability {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .hero-section .user-info .user .name-availability .availability {
+    padding: 0px 6px;
+    font-size: 9px !important;
+    min-height: 20px;
+    gap: 4px;
+  }
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }

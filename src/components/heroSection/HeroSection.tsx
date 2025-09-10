@@ -21,12 +21,11 @@ export default function HeroSection() {
 
     return (
         <div className="hero-section container">
-            <div className="user-info">
-                <div className="user">
+            <div className="user-info" style={{ justifyContent: 'space-between', alignItems: 'center', position: 'relative' }}>
+                <div className="user" style={{ flex: 1 }}>
                     <span className="small">Hey It's me <BsFillArrowThroughHeartFill /> </span>
                     <div className="name-availability">
                         <h1>Manish Kumar</h1>
-
                         <div className="availability">
                             <span className="dot"></span>  Available
                         </div>
@@ -37,16 +36,14 @@ export default function HeroSection() {
                         <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><LuTimer /> {time.toLocaleTimeString()}</span>
                     </div>
                 </div>
-
+                <div className="user-image" style={{ marginLeft: '32px' }}>
+                    <img src="https://pbs.twimg.com/profile_images/1962515460148326401/dBeLgEGo_400x400.jpg" alt="user" />
+                </div>
                 <div className="curv-arrow">
                     <img src="/curv-arrow.png" alt="" />
                 </div>
-
                 <div className="random-lines">
                     <img src="/random-lines.svg" alt="" />
-                </div>
-                <div className="user-image">
-                    <img src="https://pbs.twimg.com/profile_images/1962515460148326401/dBeLgEGo_400x400.jpg" alt="user" />
                 </div>
             </div>
             <div className="about-me">

@@ -1,10 +1,9 @@
-
 .skill-section {
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
   max-width: 700px;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 18px;
+  padding-right: 18px;
   width: 100%;
 }
 
@@ -69,4 +68,26 @@
 .skill-name {
   text-transform: capitalize;
   letter-spacing: 0.5px;
+}
+
+@media (max-width: 700px) {
+  .skill-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .marquee-container {
+    padding: 4px 0;
+  }
+  .marquee {
+    gap: 0.7rem;
+  }
+  .skill-pill {
+    font-size: 12px;
+    padding: 4px 10px;
+    margin: 0 2px;
+  }
+  .skill-icon {
+    font-size: 1em;
+    margin-right: 5px;
+  }
 }

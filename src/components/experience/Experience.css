@@ -1,23 +1,29 @@
 .experience-section {
-  /* margin-bottom: 48px; */
   max-width: 700px;
   margin: 0 auto;
   width: 100%;
   font-family: "Figtree", sans-serif;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .exp-card {
+  margin-top: 10px;
   margin-bottom: 30px;
+  padding-bottom: 14px;
   color: #fff;
   position: relative;
   border-radius: 12px;
-  /* padding: 24px 0; */
+  background: transparent;
+  border: 1.5px dashed #444;
 }
 
 .exp-header {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin: 0 18px;
+  margin-top: 12px;
 }
 
 .exp-logo {
@@ -66,9 +72,13 @@
 }
 
 .exp-meta {
-  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
   color: #b3b3b3;
-  margin: 4px 0 12px 0;
+  padding-right: 30px;
+
+
 }
 
 .exp-arrow {
@@ -77,25 +87,6 @@
   transition: transform 0.2s;
   font-size: 1.2rem;
   color: #fff;
-}
-
-.exp-arrow.open {
-  transform: rotate(180deg);
-}
-
-.exp-desc {
-  margin-top: 8px;
-  font-size: 1rem;
-  color: #d1d5db;
-}
-
-.exp-company-info {
-  margin-top: 16px;
-  border-radius: 8px;
-  padding: 16px;
-  color: #fff;
-  font-size: 0.98rem;
-  box-shadow: 0 2px 8px -4px #0006;
 }
 
 .exp-company-row {
@@ -123,4 +114,39 @@
   color: #22c55e;
   font-size: 1.1em;
   margin-left: 4px;
+}
+
+@media (max-width: 700px) {
+  .experience-section {
+    padding: 0 25px;
+  }
+  .exp-card {
+    padding: 10px 9px;
+    margin-bottom: 18px;
+  }
+  .exp-header,
+  .exp-card > div {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  .exp-logo {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+  }
+  .exp-company-row {
+    min-height: 2px;
+    gap: 6px;
+  }
+  .exp-company-name {
+    font-size: 0.9rem;
+  }
+  .exp-role {
+    font-size: 0.75rem !important;
+  }
+  .exp-meta {
+    font-size: 0.75rem;
+  }
 }
