@@ -190,12 +190,17 @@
   margin-bottom: 4px;
   font-size: 16px;
   line-height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .hero-section .user-info .curv-arrow {
   position: absolute;
   top: 70px;
-  left: 75%;
+  left: 73%;
   transform: rotate(90deg);
   width: 40px;
   height: 40px;
@@ -203,13 +208,22 @@
 
 .hero-section .user-info .random-lines {
   position: absolute;
-  top: 290px;
+  top: 320px;
   left: 70%;
   transform: rotate(20deg);
   width: 40px;
   height: 40px;
 }
 
+/* @media (max-width: 723px)  {
+   .hero-section .user-info .curv-arrow {
+    width: 20px !important;
+    height: 20px !important;
+    top: 60px;
+    left: 77%;
+    transform: rotate(90deg) scale(0.7);
+  }
+} */
 @media (max-width: 700px) {
   .hero-section .user-info .user-image {
     margin-right: 0;
@@ -228,8 +242,8 @@
     transform: rotate(90deg) scale(0.7);
   }
   .hero-section .user-info .random-lines {
-    top: 380px;
-    left: 78%;
+    top: 280px;
+    left: 75%;
   }
   .hero-section .about-me {
     margin-top: 24px;
@@ -253,5 +267,148 @@
   .container {
     padding-left: 25px;
     padding-right: 25px;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 650px) {
+  .hero-section .user-info .curv-arrow {
+    top: 65px;
+    left: 82%;
+  }
+  .hero-section .user-info .random-lines {
+    top: 300px;
+    left: 73%;
+  }
+}
+@media (max-width: 650px) {
+  .hero-section .user-info .curv-arrow {
+    top: 65px;
+    left: 78%;
+  }
+  .hero-section .user-info .random-lines {
+    top: 320px;
+    left: 72%;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero-section .user-info .curv-arrow {
+    top: 70px;
+    left: 75%;
+  }
+  .hero-section .user-info .random-lines {
+    top: 350px;
+    left: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-section .user-info .curv-arrow {
+    top: 75px;
+    left: 72%;
+  }
+  .hero-section .user-info .random-lines {
+    top: 380px;
+    left: 78%;
+  }
+}
+
+@media (max-width: 402px) {
+  .hero-section .user-info .user h1 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .hero-section .user-info .user-image {
+    width: 70px;
+    height: 70px;
+  }
+  .hero-section .user-info .user .general-info {
+    font-size: 11px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .hero-section .user-info .user .name-availability .availability {
+    font-size: 8px !important;
+    padding: 1px 4px;
+    min-height: 18px;
+  }
+  .hero-section .user-info .curv-arrow,
+  .hero-section .user-info .random-lines {
+    display: none;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .about-me-content {
+    font-size: 14px;
+  }
+  .contact-btn {
+    font-size: 10px !important;
+    padding: 3px 6px;
+    min-height: 24px;
+  }
+  .contact-or {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-section .user-info .user h1 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .hero-section .user-info .user-image {
+    width: 60px;
+    height: 60px;
+  }
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about-me-content {
+    font-size: 13px;
+  }
+  .hero-section .user-info .user .general-info {
+    font-size: 10px;
+  }
+}
+
+/* Ultra small screens - 354px and below */
+@media (max-width: 354px) {
+  .hero-section .user-info .user h1 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .hero-section .user-info .user-image {
+    width: 55px;
+    height: 55px;
+  }
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .about-me-content {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .hero-section .user-info .user .general-info {
+    font-size: 9px;
+  }
+  .hero-section .user-info .user .name-availability .availability {
+    font-size: 7px !important;
+    padding: 1px 3px;
+    min-height: 16px;
+  }
+  .contact-btn {
+    font-size: 9px !important;
+    padding: 2px 4px;
+    min-height: 20px;
+  }
+  .contact-or {
+    font-size: 9px !important;
   }
 }

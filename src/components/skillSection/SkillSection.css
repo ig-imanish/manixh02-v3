@@ -1,5 +1,4 @@
 .skill-section {
-  /* margin-bottom: 48px; */
   max-width: 700px;
   margin: 0 auto;
   padding-left: 18px;
@@ -9,23 +8,43 @@
 
 .marquee-container {
   width: inherit;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   position: relative;
   padding: 8px 0;
+  cursor: grab;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.marquee-container::-webkit-scrollbar {
+  display: none;
+}
+
+.marquee-container:active {
+  cursor: grabbing;
 }
 
 .marquee {
   display: flex;
   gap: 1.5rem;
-  animation: marquee 30s linear infinite;
+  animation: marquee 60s linear infinite;
   width: max-content;
+  transition: animation-play-state 0.3s ease;
+  will-change: transform;
 }
 
 .marquee.reverse {
-  animation: marquee-reverse 30s linear infinite;
+  animation: marquee-reverse 60s linear infinite;
 }
 
-.marquee:hover {
+/* Pause animation when user is scrolling or hovering */
+.marquee-container:hover .marquee {
+  animation-play-state: paused;
+}
+
+.marquee-container:active .marquee {
   animation-play-state: paused;
 }
 
@@ -34,13 +53,13 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-33.333%);
   }
 }
 
 @keyframes marquee-reverse {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-33.333%);
   }
   100% {
     transform: translateX(0);
@@ -54,7 +73,7 @@
   font-size: 14px;
   color: #fff;
   margin: 0 4px;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
   white-space: nowrap;
 }
 
@@ -83,11 +102,65 @@
   }
   .skill-pill {
     font-size: 12px;
-    padding: 4px 10px;
+    padding: 3px 8px;
     margin: 0 2px;
   }
   .skill-icon {
     font-size: 1em;
     margin-right: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .marquee {
+    gap: 0.5rem;
+  }
+  .skill-pill {
+    font-size: 11px;
+    padding: 2px 6px;
+    margin: 0 1px;
+  }
+  .skill-icon {
+    font-size: 0.9em;
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .skill-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .skill-pill {
+    font-size: 10px;
+    padding: 2px 5px;
+  }
+  .skill-icon {
+    font-size: 0.8em;
+    margin-right: 3px;
+  }
+}
+
+/* Ultra small screens - 354px and below */
+@media (max-width: 354px) {
+  .skill-section {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .marquee {
+    gap: 0.3rem;
+  }
+  .skill-pill {
+    font-size: 9px;
+    padding: 1px 4px;
+    margin: 0 1px;
+  }
+  .skill-icon {
+    font-size: 0.7em;
+    margin-right: 2px;
   }
 }

@@ -1,0 +1,83 @@
+.calendar-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: transparent;
+  border: 1.5px dashed #444;
+  border-radius: 12px;
+  font-family: "Figtree", sans-serif;
+  overflow: hidden;
+}
+
+/* Hide scrollbars from GitHub calendar */
+.calendar-container ::-webkit-scrollbar {
+  display: none;
+}
+
+.calendar-container * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* GitHub calendar wrapper styling */
+.calendar-container .react-activity-calendar,
+.calendar-container .github-calendar {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.calendar-container .react-activity-calendar::-webkit-scrollbar,
+.calendar-container .github-calendar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom styling for calendar content */
+.calendar-container .github-calendar svg {
+  color: white !important;
+}
+
+.calendar-container .github-calendar .color-calendar-graph-day-L1-bg {
+  fill: #0e4429 !important;
+}
+
+.calendar-container .github-calendar .color-calendar-graph-day-L2-bg {
+  fill: #006d32 !important;
+}
+
+.calendar-container .github-calendar .color-calendar-graph-day-L3-bg {
+  fill: #26a641 !important;
+}
+
+.calendar-container .github-calendar .color-calendar-graph-day-L4-bg {
+  fill: #39d353 !important;
+}
+
+@media (max-width: 700px) {
+  .calendar-container {
+    /* margin: 16px 25px; */
+    padding: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .calendar-container {
+    margin: 12px 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .calendar-container {
+    margin: 10px 10px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 354px) {
+  .calendar-container {
+    margin: 8px 8px;
+    padding: 8px;
+  }
+}

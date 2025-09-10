@@ -2,6 +2,7 @@ import { RiShareBoxFill } from "react-icons/ri";
 import SectionTitle from "../sectionTitle/SectionTitle";
 import "./Experience.css";
 import ExperienceCard from "./ExperienceCard";
+import Calendar from "../calendar/Calendar";
 
 export default function Experience() {
     return (
@@ -17,6 +18,7 @@ export default function Experience() {
                     dates="May 2025 - Present"
                     location="India (Remote)"
                 />
+                <Calendar />
 
             </section>
         </div>

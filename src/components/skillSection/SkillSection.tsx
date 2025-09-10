@@ -1,14 +1,14 @@
+import { CgVercel } from "react-icons/cg";
 import { DiMysql } from "react-icons/di";
 import { FaCss3Alt, FaDocker, FaGitAlt, FaGithub, FaHtml5, FaNodeJs, FaReact, FaWindows } from "react-icons/fa";
-import { GrJava } from "react-icons/gr";
-import { SiApachemaven, SiExpress, SiIntellijidea, SiJavascript, SiMongodb, SiNetlify, SiPostman, SiRender, SiSpringboot, SiSwagger, SiThymeleaf, SiTypescript } from "react-icons/si";
-import "./SkillSection.css";
-import { VscVscode } from "react-icons/vsc";
 import { FcLinux } from "react-icons/fc";
+import { GrJava } from "react-icons/gr";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiNotionFill, RiSupabaseFill } from "react-icons/ri";
-import { CgVercel } from "react-icons/cg";
+import { SiApachemaven, SiExpress, SiJavascript, SiMongodb, SiNetlify, SiPostman, SiRender, SiSpringboot, SiSwagger, SiThymeleaf, SiTypescript } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import SectionTitle from "../sectionTitle/SectionTitle";
+import "./SkillSection.css";
 
 const technologies = [
     { name: "Java", icon: <GrJava color="#df3d14ff" /> },
@@ -36,7 +36,6 @@ const tools = [
     { name: "Postman", icon: <SiPostman color="#f34f29" /> },
     { name: "Swagger", icon: <SiSwagger color="#01ec64" /> },
     { name: "VsCode", icon: <VscVscode color="#007acc" /> },
-    { name: "IntelliJ IDEA", icon: <SiIntellijidea color="#fff" /> },
     { name: "Linux", icon: <FcLinux /> },
     { name: "Windows", icon: <FaWindows color="#0078d4" /> },
     { name: "Docker", icon: <FaDocker color="#2496ed" /> },
@@ -62,13 +61,19 @@ export default function SkillSection() {
             <div className="marquee-container">
                 <div className="marquee">
                     {technologies.map((skill, idx) => (
-                        <div className="skill-pill" key={idx}>
+                        <div className="skill-pill" key={`tech-1-${idx}`}>
                             <span className="skill-icon">{skill.icon}</span>
                             <span className="skill-name">{skill.name}</span>
                         </div>
                     ))}
                     {technologies.map((skill, idx) => (
-                        <div className="skill-pill" key={idx + technologies.length}>
+                        <div className="skill-pill" key={`tech-2-${idx}`}>
+                            <span className="skill-icon">{skill.icon}</span>
+                            <span className="skill-name">{skill.name}</span>
+                        </div>
+                    ))}
+                    {technologies.map((skill, idx) => (
+                        <div className="skill-pill" key={`tech-3-${idx}`}>
                             <span className="skill-icon">{skill.icon}</span>
                             <span className="skill-name">{skill.name}</span>
                         </div>
@@ -78,13 +83,19 @@ export default function SkillSection() {
             <div className="marquee-container">
                 <div className="marquee reverse">
                     {tools.map((tool, idx) => (
-                        <div className="skill-pill" key={idx}>
+                        <div className="skill-pill" key={`tool-1-${idx}`}>
                             <span className="skill-icon">{tool.icon}</span>
                             <span className="skill-name">{tool.name}</span>
                         </div>
                     ))}
                     {tools.map((tool, idx) => (
-                        <div className="skill-pill" key={idx + tools.length}>
+                        <div className="skill-pill" key={`tool-2-${idx}`}>
+                            <span className="skill-icon">{tool.icon}</span>
+                            <span className="skill-name">{tool.name}</span>
+                        </div>
+                    ))}
+                    {tools.map((tool, idx) => (
+                        <div className="skill-pill" key={`tool-3-${idx}`}>
                             <span className="skill-icon">{tool.icon}</span>
                             <span className="skill-name">{tool.name}</span>
                         </div>

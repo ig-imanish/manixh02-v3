@@ -53,10 +53,8 @@
 @media (max-width: 700px) {
   .footer {
     width: 100%;
-    padding: 24px 50px;
+    padding: 24px 25px;
     margin-top: 32px;
-
-    padding-right: 0px;
   }
 
   .footer-content {
@@ -79,5 +77,68 @@
     flex-direction: column;
     gap: 8px;
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    padding: 20px 15px;
+  }
+
+  .footer-quote {
+    font-size: 0.8rem;
+    margin-bottom: 16px;
+  }
+
+  .footer-made {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding: 18px 10px;
+  }
+
+  .footer-quote {
+    font-size: 0.75rem;
+    margin-bottom: 14px;
+  }
+
+  .footer-made {
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 0.65rem;
+  }
+}
+
+/* Ultra small screens - 354px and below */
+@media (max-width: 354px) {
+  .footer {
+    padding: 16px 8px;
+  }
+
+  .footer-quote {
+    font-size: 0.7rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .footer-made {
+    font-size: 0.65rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-bottom {
+    font-size: 0.6rem;
+    gap: 6px;
   }
 }

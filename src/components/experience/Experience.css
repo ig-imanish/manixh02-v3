@@ -3,14 +3,14 @@
   margin: 0 auto;
   width: 100%;
   font-family: "Figtree", sans-serif;
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .exp-card {
-  margin-top: 10px;
+  margin-top: 16px;
   margin-bottom: 30px;
-  padding-bottom: 14px;
+  padding-bottom: 16px;
   color: #fff;
   position: relative;
   border-radius: 12px;
@@ -77,8 +77,6 @@
   font-size: 0.9rem;
   color: #b3b3b3;
   padding-right: 30px;
-
-
 }
 
 .exp-arrow {
@@ -148,5 +146,82 @@
   }
   .exp-meta {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .experience-section {
+    padding: 0 15px;
+  }
+  .exp-card {
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+  .exp-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .exp-company-name {
+    font-size: 0.8rem;
+  }
+  .exp-role {
+    font-size: 0.7rem !important;
+  }
+  .exp-meta {
+    font-size: 0.7rem;
+  }
+  .exp-company-icons span {
+    font-size: 0.65em !important;
+    padding: 1px 6px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .experience-section {
+    padding: 0 10px;
+  }
+  .exp-card {
+    padding: 6px;
+  }
+  .exp-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .exp-company-name {
+    font-size: 0.75rem;
+  }
+  .exp-role {
+    font-size: 0.65rem !important;
+  }
+  .exp-meta {
+    font-size: 0.65rem;
+  }
+}
+
+/* Ultra small screens - 354px and below */
+@media (max-width: 354px) {
+  .experience-section {
+    padding: 0 8px;
+  }
+  .exp-card {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .exp-logo {
+    width: 32px;
+    height: 32px;
+  }
+  .exp-company-name {
+    font-size: 0.7rem;
+  }
+  .exp-role {
+    font-size: 0.6rem !important;
+  }
+  .exp-meta {
+    font-size: 0.6rem;
+  }
+  .exp-company-icons span {
+    font-size: 0.6em !important;
+    padding: 1px 4px !important;
   }
 }
