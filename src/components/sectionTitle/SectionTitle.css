@@ -2,7 +2,7 @@
   position: relative;
   display: inline-block;
   background: #18181b;
-  color: rgb(255 255 255/1);
+  color: oklch(87% 0 0);
   padding: 4px 12px;
   border-radius: 2px;
   font-size: 1rem;
@@ -19,36 +19,40 @@
   height: 8px;
   box-sizing: border-box;
 }
+:root {
+  --corner-color: oklch(71.547% 0.00008 271.152);
+  --corner-border-width: 2px;
+}
 
 .corner.top.left {
   top: 0;
   left: 0;
-  border-top: 2px solid rgb(255 255 255/1);
-  border-left: 2px solid rgb(255 255 255/1);
+  border-top: var(--corner-border-width) solid var(--corner-color);
+  border-left: var(--corner-border-width) solid var(--corner-color);
   border-radius: 2px 0 0 0;
 }
 
 .corner.top.right {
   top: 0;
   right: 0;
-  border-top: 2px solid rgb(255 255 255/1);
-  border-right: 2px solid rgb(255 255 255/1);
+  border-top: var(--corner-border-width) solid var(--corner-color);
+  border-right: var(--corner-border-width) solid var(--corner-color);
   border-radius: 0 2px 0 0;
 }
 
 .corner.bottom.left {
   bottom: 0;
   left: 0;
-  border-bottom: 2px solid rgb(255 255 255/1);
-  border-left: 2px solid rgb(255 255 255/1);
+  border-bottom: var(--corner-border-width) solid var(--corner-color);
+  border-left: var(--corner-border-width) solid var(--corner-color);
   border-radius: 0 0 0 2px;
 }
 
 .corner.bottom.right {
   bottom: 0;
   right: 0;
-  border-bottom: 2px solid rgb(255 255 255/1);
-  border-right: 2px solid rgb(255 255 255/1);
+  border-bottom: var(--corner-border-width) solid var(--corner-color);
+  border-right: var(--corner-border-width) solid var(--corner-color);
   border-radius: 0 0 2px 0;
 }
 

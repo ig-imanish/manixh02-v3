@@ -5,7 +5,8 @@ export default function Projects() {
     return (
 
         <section className="project-section">
-            <SectionTitle>Places I’ve Made an Impact</SectionTitle>
+            <SectionTitle>Things I've Built
+            </SectionTitle>
             <ProjectCard
                 banner="/Secure2FA.png"
                 name="Secure2FA"

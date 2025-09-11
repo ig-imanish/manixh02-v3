@@ -82,7 +82,8 @@
 
 @media (max-width: 400px) {
   .footer {
-    padding: 20px 15px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .footer-quote {
@@ -102,7 +103,10 @@
 
 @media (max-width: 360px) {
   .footer {
-    padding: 18px 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 
   .footer-quote {
@@ -123,7 +127,10 @@
 /* Ultra small screens - 354px and below */
 @media (max-width: 354px) {
   .footer {
-    padding: 16px 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .footer-quote {
