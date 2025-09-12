@@ -4,9 +4,13 @@
   padding: 20px;
   background: transparent;
   border: 1.5px dashed #444;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   font-family: "Figtree", sans-serif;
   overflow: hidden;
+}
+
+.calendar-container:hover {
+  border: 1.5px dashed #888888;
 }
 
 /* Hide scrollbars from GitHub calendar */

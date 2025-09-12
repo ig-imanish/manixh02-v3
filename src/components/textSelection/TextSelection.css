@@ -1,0 +1,100 @@
+.text-selection-actions {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  gap: 4px;
+  background: rgba(26, 27, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 4px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.4), 0px 4px 16px rgba(0, 0, 0, 0.3),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.2s ease-out;
+  pointer-events: auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.selection-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Figtree", sans-serif;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.selection-action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.selection-action-btn:active {
+  transform: scale(0.95);
+}
+
+.selection-action-btn:first-child:hover {
+  color: #4ade80; /* Green for copy */
+}
+
+.selection-action-btn:nth-child(2):hover {
+  color: #60a5fa; /* Blue for share */
+}
+
+.selection-action-btn:last-child:hover {
+  color: #fbbf24; /* Yellow for search */
+}
+
+/* Tooltip effect */
+.selection-action-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1001;
+}
+
+.selection-action-btn:hover::after {
+  opacity: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .text-selection-actions {
+    display: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .text-selection-actions {
+    display: none !important;
+  }
+}

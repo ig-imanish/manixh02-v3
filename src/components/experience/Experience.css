@@ -13,39 +13,96 @@
   padding-bottom: 16px;
   color: #fff;
   position: relative;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   background: transparent;
   border: 1.5px dashed #444;
+}
+
+.exp-card:hover {
+  border: 1.5px dashed #888888;
 }
 
 .exp-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
   gap: 16px;
   margin: 0 18px;
   margin-top: 12px;
 }
 
+.exp-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.exp-company-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -10px;
+}
+
+.exp-company-link {
+  color: #fff;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.exp-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #091d11;
+  font-weight: 400;
+  font-size: 0.75em;
+  border-radius: 4px;
+  padding: 2px 8px;
+  height: 22px;
+  color: #b3b3b3;
+}
+
+.exp-status-dot {
+  color: #02ff67ff;
+  font-weight: 400;
+  font-size: 0.85em;
+  border-radius: 6px;
+}
+
+.exp-role-text {
+  font-size: 1rem;
+  margin-top: 2px;
+  color: #b3b3b3;
+}
+
 .exp-logo {
   width: 48px;
   height: 48px;
-  border-radius: 10px;
-  background: #18181b;
+  /* border-radius: 10px; */
+  /* background: transparent; */
+  background: #0081fa;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   margin-right: 0;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .exp-logo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  /* border-radius: 50%; */
+  border-radius: 5px;
   display: block;
-  background: transparent;
+  /* background: transparent; */
 }
 
 .exp-logo-img img {

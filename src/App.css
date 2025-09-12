@@ -20,7 +20,16 @@ html {
   box-sizing: border-box;
 }
 
-/* Custom Liquid Glass Scrollbar */
+::selection {
+  background: rgba(180, 180, 180, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(180, 180, 180, 0.3);
+  color: #ffffff;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   background: transparent;
@@ -72,23 +81,19 @@ html {
   transform: scaleY(0.98);
 }
 
-/* Firefox Scrollbar */
 html {
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.02);
 }
 
-/* Smooth scrolling enhancement for all elements */
 * {
   scroll-margin-top: 20px;
 }
 
-/* Enhanced smooth scrolling for containers */
 .marquee-container {
   scroll-behavior: smooth;
 }
 
-/* Slower, smoother scrolling with custom easing */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: auto;
@@ -99,43 +104,36 @@ html {
   }
 }
 
-/* Custom smooth scroll implementation */
 html,
 body {
   scroll-snap-type: y proximity;
   scroll-padding-top: 2rem;
 }
 
-/* Smooth scroll polyfill for better control */
 .smooth-scroll {
   scroll-behavior: smooth;
   transition: scroll-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Enhanced smooth scrolling for containers */
 .marquee-container {
   scroll-behavior: smooth;
   transition: scroll-left 0.6s ease-out;
 }
 
-/* Slower page scrolling */
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: auto;
   }
 }
 
-/* Global slow smooth scroll using CSS transition */
 html {
   scroll-behavior: auto !important;
 }
 
-/* Slow smooth scrolling with JavaScript override */
 * {
   scroll-behavior: auto !important;
 }
 
-/* Custom scroll timing for page elements */
 .container,
 .skill-section,
 .project-section,

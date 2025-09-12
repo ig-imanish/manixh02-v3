@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer"
 import HeroSection from "../../components/heroSection/HeroSection"
 import Projects from "../../components/projects/Projects"
 import SkillSection from "../../components/skillSection/SkillSection"
+import ContactMe from "../../components/contactMe/ContactMe"
 import "./home.css"
 export default function Home() {
     return (
@@ -11,7 +12,7 @@ export default function Home() {
             <SkillSection />
             <Experience />
             <Projects />
-            
+            <ContactMe />
             <Footer />
         </div>
     )
