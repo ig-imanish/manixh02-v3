@@ -4,7 +4,7 @@ import "./Project.css"
 import ProjectCard from './ProjectCard'
 import { HiArrowRight } from 'react-icons/hi'
 
-export default function Projects() {
+export default function AllProjects() {
     return (
 
         <section className="project-section">
@@ -28,17 +28,25 @@ export default function Projects() {
                 live="https://blogzone-clg.netlify.app/"
             />
 
-            <div className="view-all-projects left-side">
+
+            <div className="view-all-projects">
                 <Link
-                    to="/projects"
+                    to="/"
                     className="view-all-btn"
-                    aria-label="More Projects"
+                    aria-label="back to home"
                 >
-                    <span>More Projects</span>
+                    <span>Back to Home</span>
+                    <HiArrowRight className="arrow-icon" />
+                </Link>
+                <Link
+                    to="/blogs"
+                    className="view-all-btn"
+                    aria-label="View Blogs"
+                >
+                    <span>View Blogs</span>
                     <HiArrowRight className="arrow-icon" />
                 </Link>
             </div>
         </section>
-
     )
 }

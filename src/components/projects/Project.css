@@ -1,12 +1,12 @@
 .project-section {
-  /* margin-top: 0px !important; */
-
   max-width: 700px;
   margin: 0 auto;
   width: 100%;
   font-family: "Figtree", sans-serif;
   padding-left: 18px;
   padding-right: 18px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .project-card {
@@ -67,6 +67,64 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  position: relative;
+}
+
+.demo-warning-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.demo-warning-icon {
+  color: #fbbf24;
+  font-size: 0.9rem;
+  cursor: help;
+  margin-left: 4px;
+}
+
+.demo-warning-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: white;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: "Figtree", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+  min-width: 200px;
+  text-align: center;
+}
+
+.demo-warning-tooltip p {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.demo-warning-tooltip p:first-child {
+  color: #dc2626;
+  margin-bottom: 2px;
+}
+
+.demo-warning-tooltip p:last-child {
+  color: #666;
+  font-size: 10px;
+}
+
+.demo-warning-container:hover .demo-warning-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
 .project-link-icons {
@@ -183,9 +241,63 @@
   opacity: 0.8;
 }
 
+.view-all-projects {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -15px;
+  margin-bottom: 16px;
+  /* padding-right: 4px; */
+}
+
+.left-side {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -15px;
+  margin-bottom: 16px;
+  /* padding-right: 4px; */
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 8px;
+  background: #1a1b1c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  border: 1.5px dashed #444;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.view-all-btn:hover {
+  border: 1.5px dashed #888888;
+}
+
+.view-all-btn:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.view-all-btn:active {
+  transform: translateY(0);
+}
+
+.arrow-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
 @media (max-width: 700px) {
   .project-section {
-    padding: 0 25px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
   .project-card {
     flex-direction: column;
@@ -260,6 +372,38 @@
     font-size: 0.7rem;
     margin-bottom: 4px;
   }
+  .demo-warning-tooltip {
+    font-size: 10px;
+    padding: 6px 10px;
+    min-width: 180px;
+  }
+
+  .demo-warning-tooltip p:last-child {
+    font-size: 9px;
+  }
+
+  .view-all-projects {
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding-right: 0;
+  }
+  .left-side {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    margin-bottom: 16px;
+    /* padding-right: 4px; */
+  }
+
+  .view-all-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .arrow-icon {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -294,6 +438,28 @@
     font-size: 0.65rem;
     padding: 1px 4px;
   }
+  .demo-warning-icon {
+    font-size: 0.8rem;
+  }
+
+  .demo-warning-tooltip {
+    font-size: 9px;
+    padding: 5px 8px;
+    min-width: 160px;
+  }
+
+  .demo-warning-tooltip p:last-child {
+    font-size: 8px;
+  }
+
+  .view-all-btn {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+
+  .arrow-icon {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -322,8 +488,8 @@
     margin-bottom: 12px;
   }
   .banner {
-    width: calc(100vw - 36px) !important;
-    max-width: calc(100vw - 36px) !important;
+    width: calc(100% - 4px) !important;
+    max-width: calc(100% - 4px) !important;
     height: 100px;
     min-height: 100px;
     max-height: 100px;
@@ -348,7 +514,27 @@
     font-size: 0.6rem;
     padding: 1px 3px;
   }
-  .project-tech-label {
+  .demo-warning-icon {
     font-size: 0.7rem;
+  }
+
+  .demo-warning-tooltip {
+    font-size: 8px;
+    padding: 4px 6px;
+    min-width: 140px;
+  }
+
+  .demo-warning-tooltip p:last-child {
+    font-size: 7px;
+  }
+
+  .view-all-btn {
+    padding: 4px 10px;
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .arrow-icon {
+    font-size: 13px;
   }
 }

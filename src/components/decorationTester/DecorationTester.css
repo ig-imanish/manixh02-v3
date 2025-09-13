@@ -1,0 +1,136 @@
+.decoration-tester {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(26, 27, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  min-width: 280px;
+  font-family: "Figtree", sans-serif;
+}
+
+.decoration-tester-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.decoration-tester-header h3 {
+  color: #fff;
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.decoration-tester-header p {
+  color: #b3b3b3;
+  margin: 0;
+  font-size: 12px;
+}
+
+.decoration-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.decoration-btn {
+  background: #1a1b1c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 11px;
+  font-family: "Figtree", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.decoration-btn:hover {
+  background: #2a2b2c;
+  transform: translateY(-1px);
+}
+
+.decoration-counter {
+  color: #b3b3b3;
+  font-size: 11px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.decoration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.decoration-item {
+  background: #1a1b1c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.decoration-item:hover {
+  background: #2a2b2c;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.decoration-item.active {
+  background: #4ade80;
+  color: #000;
+  border-color: #4ade80;
+}
+
+.decoration-day {
+  font-size: 10px;
+  font-weight: 600;
+  color: inherit;
+  margin-bottom: 2px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.decoration-name {
+  font-size: 9px;
+  color: inherit;
+  line-height: 1.2;
+}
+
+.decoration-item.active .decoration-day,
+.decoration-item.active .decoration-name {
+  color: #000;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .decoration-tester {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .decoration-tester {
+    top: 10px;
+    right: 10px;
+    min-width: 240px;
+    padding: 12px;
+  }
+
+  .decoration-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+
+  .decoration-item {
+    padding: 6px 4px;
+  }
+}

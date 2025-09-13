@@ -1,11 +1,11 @@
-import { FaDiscord, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { HiDocumentDownload } from "react-icons/hi";
 import "./ContactMe.css";
 
 const socialLinks = [
     {
         name: "Twitter",
-        url: "https://x.com/messages/1752022872015417344-1865997943733415936?text=Hi, I would like to connect with you.",
+        url: "https://x.com/itz_Manish02",
         icon: <FaTwitter />,
         color: "#1DA1F2"
     },
@@ -27,12 +27,12 @@ const socialLinks = [
         icon: <FaLinkedin />,
         color: "#0077B5"
     },
-    {
-        name: "Discord",
-        url: "#", // Add your Discord profile link here
-        icon: <FaDiscord />,
-        color: "#5865F2"
-    }
+    // {
+    //     name: "Discord",
+    //     url: "#", // Add your Discord profile link here
+    //     icon: <FaDiscord />,
+    //     color: "#5865F2"
+    // }
 ];
 
 export default function ContactMe() {

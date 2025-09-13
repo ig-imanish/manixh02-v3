@@ -3,8 +3,10 @@
   margin: 0 auto;
   width: 100%;
   font-family: "Figtree", sans-serif;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 18px;
+  padding-right: 18px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .exp-card {
@@ -173,7 +175,8 @@
 
 @media (max-width: 700px) {
   .experience-section {
-    padding: 0 25px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
   .exp-card {
     padding: 10px 9px;
@@ -198,6 +201,10 @@
   .exp-company-name {
     font-size: 0.9rem;
   }
+  .exp-role-text {
+    font-size: 0.8rem;
+  }
+
   .exp-role {
     font-size: 0.75rem !important;
   }
@@ -220,10 +227,13 @@
     height: 40px;
   }
   .exp-company-name {
-    font-size: 0.8rem;
+    font-size: 0.81rem;
   }
   .exp-role {
     font-size: 0.7rem !important;
+  }
+  .exp-role-text {
+    font-size: 0.76rem;
   }
   .exp-meta {
     font-size: 0.7rem;
